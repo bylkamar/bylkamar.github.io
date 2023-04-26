@@ -1,3 +1,234 @@
+/* 
+#3D4A91
+#222952
+#5D70DE
+#4351A1
+#323D78 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+:root {
+    --purple: #9057EB;
+    --pink: #D74FFF;
+    --dkblue: #222952;
+    --lgblue: #5D70DE;
+    --smblue: #3D4A91;
+    --smlblue: #4351A1;
+    --blue: #323D78;
+    --black: #222952;
+    --white: #F2F2F2;
+    --gray: #4351A1;
+    --darkgray: #323D78;
+    --font-size: 1.3rem;
+    --sans: 'Oxygen', sans-serif;
+    --mono: "Oxygen Mono", monospace;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--sans);
+    padding: 0;
+    margin: 0;
+    background-color: var(--dkblue);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--purple);
+}
+
+a:hover {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+#intro {
+    /* top right bottom legt (trbl) */
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--lgblue);
+    display: block;
+}
+
+#intro h1 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+#contact {
+    /* utile pour mettre le contenu en block définie */
+    width: 400px;
+
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+    color: var(--white);
+}
+
+nav h1 a:hover {
+    color: var(--pink);
+}
+
+nav h1 i {
+    color: var(--pink);
+}
+
+nav ul {
+    /* enlever le style des liste */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* backgroung colors divs */
+.section-blue {
+    background-color: var(--dkblue);
+}
+
+.lbgradient {
+    background: linear-gradient(90deg, rgba(215, 79, 255, 1) 0%, rgba(93, 112, 222, 1) 100%);
+    height: 2px;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+
+}
+
+nav [class*="fa-"] {
+    color: var(--purple);
+    font-size: 150%;
+}
+
+nav h1 [class*="fa-"] {
+    color: var(--purple);
+    font-size: 100%;
+}
+
+nav a:hover,
+nav h1 [class*="fa-"]:hover {
+    color: var(--pink);
+    font-size: 100%;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--pink);
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+.button {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--mono);
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--lgblue);
+}
+
+@media (min-width: 850px) {
+
+    /* on limite la nav pour pas quelle sois sur lextremite de fou */
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+}
+
+footer {
+    padding: 2rem 0;
+    background-color: var(--blue);
+    text-align: center;
+    font-weight: normal;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer [class*="fa-"] {
+    color: var(--purple);
+    padding: 1rem 0;
 }
